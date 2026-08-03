@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --color-cyber-navy: #091D42;
+  --color-cyber-slate: #05122C;
+  --color-cyber-green: #2CD97B;
+  --color-cyber-green-dark: #1eb863;
+  --color-cyber-light-bg: #EAFBF2;
+  --color-cyber-border: #E2E8F0;
+  --color-cyber-border-strong: #CBD5E1;
+  --color-cyber-ink: #6B778E;
+  --color-cyber-ink-soft: #475569;
+  --color-cyber-ink-faint: #64748B;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #FFFFFF;
+    color: #6B778E;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.6;
+  }
+  ::selection {
+    background-color: #2CD97B;
+    color: #05122C;
+  }
+}
+
+/* Custom cyber scan lines and grid background effect */
+.cyber-grid {
+  background-image: radial-gradient(rgba(44, 217, 123, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.cyber-grid-light {
+  background-image: radial-gradient(rgba(44, 217, 123, 0.04) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* High Fidelity Circuit Backgrounds representing CSume assets */
+.circuit-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M10 10 L40 10 L50 20 L50 50 L70 50 L80 60 L80 110 M110 10 L90 10 L80 20 L80 40 L100 40 L110 50' fill='none' stroke='rgba(44, 217, 123, 0.06)' stroke-width='1.5'/%3E%3Ccircle cx='10' cy='10' r='3.5' fill='rgba(44, 217, 123, 0.1)'/%3E%3Ccircle cx='80' cy='110' r='3.5' fill='rgba(44, 217, 123, 0.1)'/%3E%3Ccircle cx='110' cy='10' r='3.5' fill='rgba(44, 217, 123, 0.1)'/%3E%3Ccircle cx='110' cy='50' r='2' fill='rgba(44, 217, 123, 0.08)'/%3E%3C/svg%3E");
+}
+
+/* Dotted patterns representing dotted_image_1.png / dotted_image_2.png */
+.dotted-pattern {
+  background-image: radial-gradient(rgba(44, 217, 123, 0.35) 1.5px, transparent 1.5px);
+  background-size: 10px 10px;
+}
+
+/* Seamless infinite horizontal marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 50s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 50s linear infinite;
+}
+
+.animate-marquee-paused:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+.animate-marquee-paused:hover .animate-marquee-reverse {
+  animation-play-state: paused;
+}
+
+
