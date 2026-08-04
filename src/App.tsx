@@ -17,7 +17,7 @@ import AwardsGallery from './components/AwardsGallery';
 import VirusTotalScannerModal from './components/VirusTotalScannerModal';
 import EnquiryModal from './components/EnquiryModal';
 import Footer from './components/Footer';
-import { ArcRing } from './components/Decorations';
+import { ArcRing, GreenCircuitBackground } from './components/Decorations';
 
 // Use the expert profile image path
 // @ts-ignore
@@ -216,6 +216,7 @@ export default function App() {
                 <section id="profile" className="min-h-[calc(100vh-4.5rem)] flex items-center py-12 lg:py-16 bg-cyber-slate text-white overflow-hidden relative cyber-grid">
                   <div className="absolute inset-0 bg-gradient-to-b from-cyber-slate/30 via-transparent to-cyber-slate/80 pointer-events-none" />
                   <HeroBackgroundSlideshow />
+                  <GreenCircuitBackground className="absolute left-0 top-0 h-full w-[58%] xs:w-[60%] sm:w-[62%] lg:w-full max-w-[58%] xs:max-w-[60%] sm:max-w-[62%] lg:max-w-[720px] pointer-events-none overflow-hidden select-none z-[2]" opacity={0.28} preserveAspectRatio="xMinYMid meet" />
 
                   <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -232,8 +233,8 @@ export default function App() {
                           Kartikeya <span className="text-cyber-green">Srivastava</span>
                         </motion.h1>
 
-                        <p className="font-mono text-[13px] text-cyber-green font-bold tracking-widest mb-6 uppercase border-l-2 border-cyber-green pl-3">
-                          CYBER SECURITY EXPERT <span className="text-slate-500 mx-2">/</span> YOUNG ENTREPRENEUR
+                        <p className="font-mono text-[9.5px] xs:text-[11px] sm:text-[13px] text-cyber-green font-bold tracking-wider sm:tracking-widest mb-5 sm:mb-6 uppercase border-l-2 border-cyber-green pl-2.5 sm:pl-3 whitespace-nowrap overflow-hidden text-ellipsis">
+                          CYBER SECURITY EXPERT <span className="text-slate-500 mx-1 sm:mx-2">/</span> YOUNG ENTREPRENEUR
                         </p>
 
                         {/* Paragraph & Mobile Image Flex Container */}
@@ -373,38 +374,30 @@ export default function App() {
 
                 {/* STATS COUNT BAND */}
                 <section className="bg-cyber-navy py-12 border-y border-cyber-green/20 relative overflow-hidden">
-                  <div className="max-w-[1120px] mx-auto px-8 relative z-10">
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                  <div className="max-w-[1120px] mx-auto px-6 sm:px-8 relative z-10">
+                    <div className="grid grid-cols-3 gap-3 sm:gap-8 text-center">
                       <div className="flex flex-col items-center">
-                        <span className="font-sans font-black text-3xl sm:text-4xl text-cyber-green tracking-tight mb-1">
+                        <span className="font-sans font-black text-2xl sm:text-4xl text-cyber-green tracking-tight mb-1">
                           10000+
                         </span>
-                        <span className="font-mono text-[9.5px] uppercase tracking-[0.15em] text-slate-300">
+                        <span className="font-mono text-[9px] sm:text-[9.5px] uppercase tracking-[0.12em] sm:tracking-[0.15em] text-slate-300">
                           Happy Officers
                         </span>
                       </div>
                       <div className="flex flex-col items-center border-l border-white/10">
-                        <span className="font-sans font-black text-3xl sm:text-4xl text-cyber-green tracking-tight mb-1">
+                        <span className="font-sans font-black text-2xl sm:text-4xl text-cyber-green tracking-tight mb-1">
                           410+
                         </span>
-                        <span className="font-mono text-[9.5px] uppercase tracking-[0.15em] text-slate-300">
+                        <span className="font-mono text-[9px] sm:text-[9.5px] uppercase tracking-[0.12em] sm:tracking-[0.15em] text-slate-300">
                           Projects Done
                         </span>
                       </div>
                       <div className="flex flex-col items-center border-l border-white/10">
-                        <span className="font-sans font-black text-3xl sm:text-4xl text-cyber-green tracking-tight mb-1">
+                        <span className="font-sans font-black text-2xl sm:text-4xl text-cyber-green tracking-tight mb-1">
                           88%
                         </span>
-                        <span className="font-mono text-[9.5px] uppercase tracking-[0.15em] text-slate-300">
+                        <span className="font-mono text-[9px] sm:text-[9.5px] uppercase tracking-[0.12em] sm:tracking-[0.15em] text-slate-300">
                           Threat Mitigation
-                        </span>
-                      </div>
-                      <div className="flex flex-col items-center border-l border-white/10">
-                        <span className="font-sans font-black text-3xl sm:text-4xl text-cyber-green tracking-tight mb-1">
-                          168+
-                        </span>
-                        <span className="font-mono text-[9.5px] uppercase tracking-[0.15em] text-slate-300">
-                          Active Sensors
                         </span>
                       </div>
                     </div>

@@ -66,46 +66,60 @@ export function ArcRing({
 interface GreenCircuitBackgroundProps {
   className?: string;
   opacity?: number;
+  preserveAspectRatio?: string;
 }
 
 export function GreenCircuitBackground({
   className = "absolute inset-0 pointer-events-none overflow-hidden select-none z-0",
-  opacity = 0.22,
+  opacity = 0.25,
+  preserveAspectRatio = "xMinYMid meet",
 }: GreenCircuitBackgroundProps) {
   return (
     <div className={className}>
       <svg
         className="w-full h-full text-[#2CD97B]"
         style={{ opacity }}
-        viewBox="0 0 650 350"
+        viewBox="0 0 650 480"
         fill="none"
-        preserveAspectRatio="xMidYMid slice"
+        preserveAspectRatio={preserveAspectRatio}
         xmlns="http://www.w3.org/2000/svg"
       >
         <g stroke="currentColor" strokeWidth="4.5" strokeLinecap="round" strokeLinejoin="round">
+          {/* Top Circuit Track */}
+          <path d="M-20,20 L180,20 L220,60 L370,60 L410,100 L590,100" />
+          <circle cx="590" cy="100" r="7.5" fill="#081220" stroke="currentColor" strokeWidth="3.5" />
+
           {/* Circuit Track 1 */}
-          <path d="M-20,40 L160,40 L200,80 L350,80 L390,120 L580,120" />
-          <circle cx="580" cy="120" r="7.5" fill="#081220" stroke="currentColor" strokeWidth="3.5" />
+          <path d="M-20,70 L160,70 L200,110 L350,110 L390,150 L580,150" />
+          <circle cx="580" cy="150" r="7.5" fill="#081220" stroke="currentColor" strokeWidth="3.5" />
 
           {/* Circuit Track 2 */}
-          <path d="M-20,70 L140,70 L180,110 L330,110 L370,150 L540,150" />
-          <circle cx="540" cy="150" r="7.5" fill="#081220" stroke="currentColor" strokeWidth="3.5" />
+          <path d="M-20,100 L140,100 L180,140 L330,140 L370,180 L540,180" />
+          <circle cx="540" cy="180" r="7.5" fill="#081220" stroke="currentColor" strokeWidth="3.5" />
 
           {/* Circuit Track 3 */}
-          <path d="M-20,130 L100,130 L140,170 L260,170 L300,210 L480,210" />
-          <circle cx="480" cy="210" r="7.5" fill="#081220" stroke="currentColor" strokeWidth="3.5" />
+          <path d="M-20,160 L100,160 L140,200 L260,200 L300,240 L480,240" />
+          <circle cx="480" cy="240" r="7.5" fill="#081220" stroke="currentColor" strokeWidth="3.5" />
 
           {/* Circuit Track 4 */}
-          <path d="M-20,160 L80,160 L120,200 L240,200 L280,240 L450,240" />
-          <circle cx="450" cy="240" r="7.5" fill="#081220" stroke="currentColor" strokeWidth="3.5" />
+          <path d="M-20,190 L80,190 L120,230 L240,230 L280,270 L450,270" />
+          <circle cx="450" cy="270" r="7.5" fill="#081220" stroke="currentColor" strokeWidth="3.5" />
 
           {/* Circuit Track 5 */}
-          <path d="M-20,220 L180,220 L220,180 L380,180 L410,210" />
-          <circle cx="410" cy="210" r="6.5" fill="currentColor" />
+          <path d="M-20,250 L180,250 L220,210 L380,210 L410,240" />
+          <circle cx="410" cy="240" r="6.5" fill="currentColor" />
 
           {/* Circuit Track 6 */}
-          <path d="M-20,280 L120,280 L160,320 L320,320 L350,350 L520,350" />
+          <path d="M-20,310 L120,310 L160,350 L320,350 L350,380 L520,380" />
           <circle cx="520" cy="350" r="7.5" fill="#081220" stroke="currentColor" strokeWidth="3.5" />
+
+          {/* Bottom Circuit Track 1 */}
+          <path d="M-20,370 L140,370 L180,410 L310,410 L350,440 L490,440" />
+          <circle cx="490" cy="440" r="7.5" fill="#081220" stroke="currentColor" strokeWidth="3.5" />
+
+          {/* Bottom Circuit Track 2 */}
+          <path d="M-20,430 L100,430 L140,460 L280,460 L310,475 L430,475" />
+          <circle cx="430" cy="475" r="7.5" fill="#081220" stroke="currentColor" strokeWidth="3.5" />
         </g>
       </svg>
     </div>
