@@ -260,7 +260,7 @@ export default function NetworkDiagram() {
         {activeNodeId === 'center' ? (
           <div>
             <span className="font-mono text-[10px] text-cyber-green uppercase tracking-widest font-bold block mb-1">
-              CENTRAL NODE — KARTIKEYA SRIVASTAVA
+              CENTRAL NODE: KARTIKEYA SRIVASTAVA
             </span>
             <p className="text-xs text-slate-300 leading-relaxed">
               Hover or click on any node to view detailed capabilities and specialization metrics.

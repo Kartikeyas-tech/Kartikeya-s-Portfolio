@@ -75,20 +75,8 @@ export default function PublicationsSection() {
 
       <div className="max-w-[1120px] mx-auto px-6 sm:px-8 relative z-10">
         
-        {/* Section Header */}
-        <div className="mb-12">
-          <span className="font-mono text-xs font-bold text-emerald-700 uppercase tracking-[0.2em] block mb-2">
-            RESEARCH & CONTRIBUTIONS
-          </span>
-          <h2 className="font-sans font-black text-3xl sm:text-4xl text-cyber-slate uppercase tracking-tight flex items-center gap-3">
-            <BookOpen className="w-8 h-8 text-cyber-green-dark" />
-            <span>Publications & Special Projects</span>
-          </h2>
-          <div className="h-1 w-20 bg-cyber-green mt-3 rounded-full" />
-        </div>
-
         {/* Publications & Frameworks Cards Grid */}
-        <div className="mb-14">
+        <div className="mb-14 pt-4">
           <h3 className="font-sans font-bold text-xl sm:text-2xl text-cyber-slate uppercase tracking-tight mb-6 flex items-center gap-2">
             <FileText className="w-5 h-5 text-emerald-600" />
             <span>Featured Publications & Modules</span>
@@ -203,31 +191,31 @@ export default function PublicationsSection() {
             className="bg-white border-2 border-emerald-500/30 rounded-2xl overflow-hidden shadow-md"
           >
             {/* Card Header */}
-            <div className="p-4 sm:p-5 bg-slate-900 text-white flex flex-wrap items-center justify-between gap-3 border-b border-slate-800">
+            <div className="p-3.5 sm:p-5 bg-slate-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-emerald-600/30 border border-emerald-400 flex items-center justify-center font-black text-emerald-400 text-sm">
+                <div className="w-10 h-10 rounded-full bg-emerald-600/30 border border-emerald-400 flex items-center justify-center font-black text-emerald-400 text-sm shrink-0">
                   IA
                 </div>
                 <div>
-                  <h4 className="font-sans font-bold text-sm sm:text-base text-white flex items-center gap-1.5">
+                  <h4 className="font-sans font-bold text-sm sm:text-base text-white flex items-center gap-1.5 flex-wrap">
                     <span>South Western Command - Indian Army</span>
-                    <span className="inline-block w-4 h-4 bg-sky-500 text-white rounded-full text-[10px] text-center font-bold leading-4">✓</span>
+                    <span className="inline-block w-4 h-4 bg-sky-500 text-white rounded-full text-[10px] text-center font-bold leading-4 shrink-0">✓</span>
                   </h4>
-                  <p className="font-mono text-xs text-slate-400">@SWComd_IA • Official Post</p>
+                  <p className="font-mono text-[11px] sm:text-xs text-slate-400">@SWComd_IA • Official Post</p>
                 </div>
               </div>
 
-              <span className="font-mono text-xs font-semibold bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full border border-emerald-500/30">
+              <span className="font-mono text-xs font-semibold bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full border border-emerald-500/30 self-start sm:self-auto">
                 Cyber Awareness Week 2026
               </span>
             </div>
 
             {/* Card Content & Text */}
-            <div className="p-5 sm:p-6 bg-slate-50 border-b border-slate-200">
+            <div className="p-4 sm:p-6 bg-slate-50 border-b border-slate-200">
               <h5 className="font-sans font-bold text-base sm:text-lg text-slate-900 mb-2">
                 🔒 Cyber Awareness Week 2026 | Stay Alert, Stay Secure
               </h5>
-              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed text-justify mb-4">
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed text-left mb-4">
                 As part of Cyber Awareness Week 2026 (01–07 Jul), a lecture-cum-talk on "Social Media Vulnerabilities & Protective Measures" was conducted at Sapta Shakti Auditorium for all ranks and families. The session was delivered by renowned Cyber Expert and young entrepreneur Mr. Kartikeya Srivastava, who highlighted emerging cyber threats, responsible social media practices, and measures to enhance cyber resilience in the digital domain.
               </p>
               <div className="flex flex-wrap gap-2 font-mono text-xs text-emerald-700 font-medium">
@@ -273,29 +261,29 @@ export default function PublicationsSection() {
             className="bg-white border-2 border-emerald-500/30 rounded-2xl overflow-hidden shadow-md mt-8"
           >
             {/* Card Header */}
-            <div className="p-4 sm:p-5 bg-slate-900 text-white flex flex-wrap items-center justify-between gap-3 border-b border-slate-800">
+            <div className="p-3.5 sm:p-5 bg-slate-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-emerald-600/30 border border-emerald-400 flex items-center justify-center font-black text-emerald-400 text-sm">
+                <div className="w-10 h-10 rounded-full bg-emerald-600/30 border border-emerald-400 flex items-center justify-center font-black text-emerald-400 text-sm shrink-0">
                   UP
                 </div>
                 <div>
-                  <h4 className="font-sans font-bold text-sm sm:text-base text-white flex items-center gap-1.5">
+                  <h4 className="font-sans font-bold text-sm sm:text-base text-white flex items-center gap-1.5 flex-wrap">
                     <span>Transforming UP</span>
-                    <span className="inline-block w-4 h-4 bg-sky-500 text-white rounded-full text-[10px] text-center font-bold leading-4">✓</span>
+                    <span className="inline-block w-4 h-4 bg-sky-500 text-white rounded-full text-[10px] text-center font-bold leading-4 shrink-0">✓</span>
                   </h4>
-                  <p className="font-mono text-xs text-slate-400">@transforming_up • Govt of Uttar Pradesh Official Post</p>
+                  <p className="font-mono text-[11px] sm:text-xs text-slate-400">@transforming_up • Govt of Uttar Pradesh Official Post</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2">
-                <span className="font-mono text-xs font-semibold bg-emerald-500/20 text-emerald-300 px-3 py-1 rounded-full border border-emerald-500/30">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="font-mono text-[11px] sm:text-xs font-semibold bg-emerald-500/20 text-emerald-300 px-2.5 py-1 rounded-full border border-emerald-500/30">
                   Government Initiative
                 </span>
                 <a
                   href="https://x.com/transforming_up/status/1958893168545734930"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-xs font-bold bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded-full flex items-center gap-1 transition-colors"
+                  className="font-mono text-[11px] sm:text-xs font-bold bg-sky-500 hover:bg-sky-600 text-white px-3 py-1 rounded-full flex items-center gap-1 transition-colors"
                 >
                   <span>View Post</span>
                   <ExternalLink className="w-3 h-3" />
@@ -304,18 +292,18 @@ export default function PublicationsSection() {
             </div>
 
             {/* Card Content & Text */}
-            <div className="p-5 sm:p-6 bg-slate-50 border-b border-slate-200">
+            <div className="p-4 sm:p-6 bg-slate-50 border-b border-slate-200">
               <h5 className="font-sans font-bold text-base sm:text-lg text-slate-900 mb-2">
-                🏛️ Official Post by Transforming UP | Cyber Security Training
+                🏛️ Transforming UP | UP Forensic Summit 2025
               </h5>
-              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed text-justify mb-4">
-                Official tweet recognition from Transforming UP (@transforming_up), Department of Information & Public Relations, Government of Uttar Pradesh, highlighting special cybersecurity awareness sessions and capacity-building workshops delivered by Cyber Security Expert Mr. Kartikeya Srivastava.
+              <p className="text-xs sm:text-sm text-slate-700 leading-relaxed text-left mb-4">
+                Official recognition from Transforming UP (Government of Uttar Pradesh) showcasing the UP Forensic Science Institute (UPSIFS) initiative. Highlights the integration of cutting-edge cybersecurity training, digital defense strategies, and forensic capabilities in building next-generation, tech-savvy law enforcement officers.
               </p>
               <div className="flex flex-wrap gap-2 font-mono text-xs text-emerald-700 font-medium">
                 <span>#TransformingUP</span>
+                <span>#UPSIFS</span>
+                <span>#UPForensicSummit2025</span>
                 <span>#CyberSecurity</span>
-                <span>#UPGovt</span>
-                <span>#DigitalResilience</span>
                 <span>#UttarPradesh</span>
               </div>
             </div>

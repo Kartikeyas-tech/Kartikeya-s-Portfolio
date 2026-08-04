@@ -135,7 +135,7 @@ export default function CareerRoadmap() {
       skills: 'applied practice through CTFs and labs, a public portfolio of write-ups, and structured certification progress.',
       resources: [
         {
-          name: 'HackTheBox — Starting Point',
+          name: 'HackTheBox: Starting Point',
           desc: 'Free beginner-friendly guided machines',
           url: 'https://app.hackthebox.com/starting-point',
         },
@@ -169,7 +169,7 @@ export default function CareerRoadmap() {
       displayUrl: 'netacad.com',
     },
     {
-      title: 'IBM SkillsBuild — Cybersecurity',
+      title: 'IBM SkillsBuild: Cybersecurity',
       costPill: 'Free',
       costType: 'free',
       desc: 'Free courses with digital badges covering cybersecurity fundamentals and analyst-track skills.',
@@ -180,12 +180,12 @@ export default function CareerRoadmap() {
       title: 'Fortinet NSE 1–3 (Training Institute)',
       costPill: 'Free',
       costType: 'free',
-      desc: 'Self-paced, vendor-backed certificates covering security awareness and threat fundamentals — genuinely free, no trial period.',
+      desc: 'Self-paced, vendor-backed certificates covering security awareness and threat fundamentals: genuinely free, no trial period.',
       url: 'https://training.fortinet.com/',
       displayUrl: 'training.fortinet.com',
     },
     {
-      title: 'Palo Alto Networks — Cybersecurity Fundamentals',
+      title: 'Palo Alto Networks: Cybersecurity Fundamentals',
       costPill: 'Free',
       costType: 'free',
       desc: 'Free foundational course and certificate through the Palo Alto Networks Beacon platform.',
@@ -212,7 +212,7 @@ export default function CareerRoadmap() {
       title: 'ISC2 Certified in Cybersecurity (CC)',
       costPill: 'Free program closed',
       costType: 'closed',
-      desc: "ISC2's \"One Million Certified in Cybersecurity\" free voucher program stopped accepting new participants on 20 May 2026. The CC certification still exists but is now paid for new candidates — check isc2.org for any new regional or scholarship offers.",
+      desc: "ISC2's \"One Million Certified in Cybersecurity\" free voucher program stopped accepting new participants on 20 May 2026. The CC certification still exists but is now paid for new candidates; check isc2.org for any new regional or scholarship offers.",
       url: 'https://www.isc2.org/landing/1mcc',
       displayUrl: 'isc2.org',
     },
@@ -245,7 +245,7 @@ curl --request GET \\
       id: 'hibp',
       name: 'Have I Been Pwned (HIBP)',
       tags: ['Free Web Check', 'Free Passwords API'],
-      desc: 'Check whether an email address has appeared in a known data breach — completely free on the website, no account needed. The Pwned Passwords API (checking if a password has leaked, using k-anonymity so the full password is never sent) is also free and unlimited. The Breach/domain search API for automated lookups requires a paid subscription key, starting at a low monthly cost.',
+      desc: 'Check whether an email address has appeared in a known data breach: completely free on the website, no account needed. The Pwned Passwords API (checking if a password has leaked, using k-anonymity so the full password is never sent) is also free and unlimited. The Breach/domain search API for automated lookups requires a paid subscription key, starting at a low monthly cost.',
       code: `# Check a password against the free Pwned Passwords API (k-anonymity model)
 curl --request GET \\
   --url https://api.pwnedpasswords.com/range/5BAA6`,
@@ -265,7 +265,7 @@ curl --request GET \\
     },
     {
       name: 'urlscan.io',
-      desc: 'Free URL scanning and analysis — see exactly what a link loads before you click it.',
+      desc: 'Free URL scanning and analysis: see exactly what a link loads before you click it.',
       url: 'https://urlscan.io/',
       displayUrl: 'urlscan.io',
     },
@@ -277,7 +277,7 @@ curl --request GET \\
     },
     {
       name: 'crt.sh',
-      desc: 'Free certificate transparency log search — no signup or API key required.',
+      desc: 'Free certificate transparency log search: no signup or API key required.',
       url: 'https://crt.sh/',
       displayUrl: 'crt.sh',
     },
@@ -348,7 +348,7 @@ curl --request GET \\
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100/80 border border-emerald-300 mb-4">
             <Sparkles className="w-3.5 h-3.5 text-[#136838]" />
             <span className="font-mono text-[11px] font-bold text-[#136838] tracking-wider uppercase">
-              Resource — For Students
+              Resource: For Students
             </span>
           </div>
 
@@ -357,7 +357,7 @@ curl --request GET \\
           </h1>
 
           <p className="text-sm sm:text-base text-slate-600 max-w-[75ch] mx-auto leading-relaxed font-normal mb-8">
-            A structured, four-stage path from zero experience to job-ready — built entirely around free courses, free tools, and free (or largely free) certifications. No paywalls required to get started; where a cost does exist, it's marked clearly.
+            A structured, four-stage path from zero experience to job-ready; built entirely around free courses, free tools, and free (or largely free) certifications. No paywalls required to get started; where a cost does exist, it's marked clearly.
           </p>
 
           {/* HERO STATS */}
@@ -376,7 +376,7 @@ curl --request GET \\
                 Cost To Start
               </span>
               <span className="font-sans text-sm sm:text-base font-extrabold text-cyber-slate">
-                ₹0 — Stage 1–3 resources free
+                ₹0 : Stage 1–3 resources free
               </span>
             </div>
 
@@ -401,7 +401,7 @@ curl --request GET \\
               Four Stages, In Order
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 max-w-[65ch] mt-1">
-              Each stage builds directly on the last. Don't skip ahead to tools or certifications before the fundamentals are solid — it shows up later.
+              Each stage builds directly on the last. Don't skip ahead to tools or certifications before the fundamentals are solid; it shows up later.
             </p>
           </div>
 

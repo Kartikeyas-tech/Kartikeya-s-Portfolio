@@ -128,7 +128,7 @@ export default function ContactSection() {
           <div className="flex flex-col justify-between">
             <div>
               <p className="text-base text-cyber-ink-soft mb-8 leading-relaxed max-w-[45ch]">
-                For training requests, awareness campaign design, or speaking engagements — reach out directly, or send a short brief through the secure sandbox log form.
+                For training requests, awareness campaign design, or speaking engagements: reach out directly, or send a short brief through the secure sandbox log form.
               </p>
               
               <ul className="list-none p-0 m-0 border-t border-cyber-border">

@@ -23,7 +23,7 @@ export default function ApproachSection() {
     {
       num: '03',
       title: 'Deliver',
-      description: 'Run hands-on, scenario-driven sessions rather than slide-only lectures — the goal is practiced skill, not just awareness.',
+      description: 'Run hands-on, scenario-driven sessions rather than slide-only lectures: the goal is practiced skill, not just awareness.',
       details: 'Slides are secondary; live systems are primary. Participants construct live queries, configure investigative browsers, and map metadata in real-time. This interactive sandbox pressure embeds actual tactical skills that can be deployed immediately in daily casework.'
     },
     {

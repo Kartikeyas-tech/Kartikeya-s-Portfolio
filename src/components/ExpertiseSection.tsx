@@ -41,7 +41,7 @@ export default function ExpertiseSection() {
     {
       id: 'A.04',
       title: 'Digital Footprint & Privacy',
-      description: 'Helping individuals and organizations understand — and reduce — their unintended public exposure online.',
+      description: 'Helping individuals and organizations understand, and reduce, their unintended public exposure online.',
       icon: Key,
     },
     {

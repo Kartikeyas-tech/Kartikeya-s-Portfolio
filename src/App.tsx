@@ -236,9 +236,38 @@ export default function App() {
                           CYBER SECURITY EXPERT <span className="text-slate-500 mx-2">/</span> YOUNG ENTREPRENEUR
                         </p>
 
-                        <p className="text-[16.5px] text-slate-300 max-w-[50ch] leading-relaxed mb-8">
-                          I work closely with Law Enforcement Agencies and different organizations to deliver specialized training in Open-Source Intelligence, and design cyber awareness campaigns that help officers, institutions, and the public recognize and resist digital threats.
-                        </p>
+                        {/* Paragraph & Mobile Image Flex Container */}
+                        <div className="flex items-center gap-3 sm:gap-6 mb-8">
+                          <p className="text-[12px] xs:text-[13px] sm:text-[15px] text-slate-300 max-w-[50ch] leading-relaxed flex-1">
+                            I work closely with Law Enforcement Agencies and different organizations to deliver specialized training in Open-Source Intelligence, and design cyber awareness campaigns that help officers, institutions, and the public recognize and resist digital threats.
+                          </p>
+
+                          {/* Mobile Profile Photo with Ring Graphic (Borderless Portrait) */}
+                          <div className="lg:hidden shrink-0 relative flex items-center justify-center w-[130px] xs:w-[155px] sm:w-[195px] my-auto">
+                            {/* Ring Graphic behind mobile photo */}
+                            <svg className="absolute -inset-4 w-[calc(100%+2rem)] h-[calc(100%+2rem)] pointer-events-none z-0 overflow-visible" viewBox="0 0 100 100">
+                              <defs>
+                                <linearGradient id="heroRingGradientMobile" x1="0%" y1="0%" x2="100%" y2="100%">
+                                  <stop offset="0%" stopColor="#00e676" stopOpacity="0.85" />
+                                  <stop offset="50%" stopColor="#00e676" stopOpacity="0.35" />
+                                  <stop offset="100%" stopColor="#00e676" stopOpacity="0.05" />
+                                </linearGradient>
+                              </defs>
+                              <circle cx="50" cy="50" r="48" fill="none" stroke="url(#heroRingGradientMobile)" strokeWidth="1.2" />
+                            </svg>
+                            <div className="absolute inset-0 rounded-full bg-cyber-green/15 blur-xl pointer-events-none z-0" />
+
+                            <div className="relative z-10 w-full aspect-[3/4] overflow-hidden flex items-end">
+                              <img 
+                                src={expertProfileImg} 
+                                alt="Kartikeya Srivastava" 
+                                className="w-full h-full object-cover object-top filter contrast-[1.05] brightness-[1.02]"
+                                referrerPolicy="no-referrer"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-cyber-slate via-transparent to-transparent opacity-85 pointer-events-none" />
+                            </div>
+                          </div>
+                        </div>
 
                         <div className="flex flex-wrap gap-3.5 items-center">
                           <a 
@@ -257,7 +286,7 @@ export default function App() {
                         </div>
                       </div>
 
-                      <div className="relative flex justify-center items-center">
+                      <div className="hidden lg:flex relative justify-center items-center">
                         <svg className="absolute w-[300px] sm:w-[380px] md:w-[460px] lg:w-[500px] xl:w-[540px] aspect-square pointer-events-none z-0 overflow-visible" viewBox="0 0 100 100">
                           <defs>
                             <linearGradient id="heroRingGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -385,8 +414,8 @@ export default function App() {
                 <WhyChooseSection />
 
                 {/* PORTFOLIO THREAT INSPECTION SERVICE */}
-                <section className="py-16 bg-[#EEF4FB] border-y border-blue-200/70">
-                  <div className="max-w-[1240px] mx-auto px-6 sm:px-8">
+                <section className="py-12 sm:py-16 bg-[#EEF4FB] border-y border-blue-200/70">
+                  <div className="max-w-[1240px] mx-auto px-3.5 sm:px-8">
                     <div className="mb-8">
                       <span className="font-mono text-xs font-bold text-emerald-700 uppercase tracking-[0.2em] block mb-1">
                         PORTFOLIO CYBER SERVICE
