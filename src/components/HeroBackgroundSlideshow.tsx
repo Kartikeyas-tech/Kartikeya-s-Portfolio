@@ -5,19 +5,22 @@ import { motion, AnimatePresence } from 'motion/react';
 // @ts-ignore
 import service1 from '../assets/images/gallery25.jpeg';
 // @ts-ignore
+import service3 from '../assets/images/service3.jpeg';
+// @ts-ignore
+import service4 from '../assets/images/service4.jpeg';
+// @ts-ignore
+import service6 from '../assets/images/service6.jpeg';
+// @ts-ignore
 import gallery1 from '../assets/images/gallery1.jpeg';
-// @ts-ignore
-import service3 from '../assets/images/service_3.jpeg';
-// @ts-ignore
-import service4 from '../assets/images/service_4.jpeg';
 // @ts-ignore
 import gallery21 from '../assets/images/gallery21.jpeg';
 
 const serviceImages = [
   { id: 'img-1', src: service1, objectPosition: 'object-left' },
+  { id: 'img-s3', src: service3, objectPosition: 'object-center' },
+  { id: 'img-s4', src: service4, objectPosition: 'object-center' },
   { id: 'img-2', src: gallery1, objectPosition: 'object-center' },
-  { id: 'img-3', src: service3, objectPosition: 'object-center' },
-  { id: 'img-4', src: service4, objectPosition: 'object-center' },
+  { id: 'img-s6', src: service6, objectPosition: 'object-center' },
   { id: 'img-5', src: gallery21, objectPosition: 'object-center' },
 ];
 
