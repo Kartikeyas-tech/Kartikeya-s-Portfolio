@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 
 // Static imports for slideshow images
 // @ts-ignore
-import service1 from '../assets/images/gallery25.jpeg';
+import gallery25 from '../assets/images/gallery25.jpeg';
 // @ts-ignore
 import service3 from '../assets/images/service3.jpeg';
 // @ts-ignore
@@ -13,13 +13,16 @@ import service6 from '../assets/images/service6.jpeg';
 // @ts-ignore
 import gallery1 from '../assets/images/gallery1.jpeg';
 // @ts-ignore
+import gallery4 from '../assets/images/gallery4.jpeg';
+// @ts-ignore
 import gallery21 from '../assets/images/gallery21.jpeg';
 
 const serviceImages = [
-  { id: 'img-1', src: service1, objectPosition: 'object-left' },
-  { id: 'img-s3', src: service3, objectPosition: 'object-center' },
-  { id: 'img-s4', src: service4, objectPosition: 'object-center' },
+  { id: 'img-1', src: gallery25, objectPosition: 'object-left' },
+  { id: 'img-s3', src: service3, objectPosition: 'object-right sm:object-[75%_center]' },
+  { id: 'img-s4', src: service4, objectPosition: 'object-left-top' },
   { id: 'img-2', src: gallery1, objectPosition: 'object-center' },
+  { id: 'img-g4', src: gallery4, objectPosition: 'object-center' },
   { id: 'img-s6', src: service6, objectPosition: 'object-center' },
   { id: 'img-5', src: gallery21, objectPosition: 'object-center' },
 ];
