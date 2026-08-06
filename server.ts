@@ -1,7 +1,7 @@
 import express from "express";
-import path from "path";
+
 import dotenv from "dotenv";
-import { createServer as createViteServer } from "vite";
+
 
 dotenv.config();
 
@@ -101,19 +101,11 @@ app.get("/api/virustotal/urls", async (req, res) => {
 
 // START EXPRESS SERVER WITH VITE
 async function startServer() {
-  if (process.env.NODE_ENV !== "production") {
-    const vite = await createViteServer({
-      server: { middlewareMode: true },
-      appType: "spa"
+  app.get("/", (_req, res) => {
+    res.json({
+      status: "Portfolio Backend API Running"
     });
-    app.use(vite.middlewares);
-  } else {
-    const distPath = path.join(process.cwd(), "dist");
-    app.use(express.static(distPath));
-    app.get("*", (_req, res) => {
-      res.sendFile(path.join(distPath, "index.html"));
-    });
-  }
+  });
 
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`[+] Portfolio Backend Proxy running on http://0.0.0.0:${PORT}`);
