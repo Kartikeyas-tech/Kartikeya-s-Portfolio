@@ -1,9 +1,14 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { BookOpen, FileText, ExternalLink, ShieldCheck, Award, Landmark, Building2, CheckCircle2, Share2, MessageSquare, Download, FileDown } from 'lucide-react';
 import { DotGrid, ArcRing } from './Decorations';
 
 // @ts-ignore
 import researchPaperPdf from '../assets/978-3-031-95017-9_57 (2).pdf';
+// @ts-ignore
+import osintNotesPdf from '../assets/osint_tactical_notes.pdf';
+// @ts-ignore
+import osintGoogleDorkingPdf from '../assets/osint_google_dorking_notes.pdf';
 // @ts-ignore
 import tweetImg1 from '../assets/images/Screenshot 2026-08-02 213341.png';
 // @ts-ignore
@@ -14,6 +19,31 @@ import tweetImg3 from '../assets/images/Screenshot 2026-08-02 213351.png';
 import tweetImgUP from '../assets/images/tweet.png';
 
 export default function PublicationsSection() {
+  const handleDownloadPdf = async (e: React.MouseEvent, url: string, filename: string) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(url);
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = blobUrl;
+      link.download = filename || 'Document.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(() => window.URL.revokeObjectURL(blobUrl), 1000);
+    } catch (err) {
+      console.error('Download failed, falling back to direct link:', err);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = filename || 'Document.pdf';
+      link.target = '_blank';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
   const publicationCards = [
     {
       title: 'A Comprehensive Survey of Dark Web Crawlers',
@@ -24,9 +54,32 @@ export default function PublicationsSection() {
       citation: 'Srivastava, K., Singh, R. (2025) A Comprehensive Survey of Dark Web Crawlers. In: Garg, L., Kesswani, N., Brigui, I. (eds) AI Technologies for Information Systems and Management Science. ISMS 2025. Lecture Notes in Networks and Systems, vol 1479. Springer, Cham.',
       link: 'https://doi.org/10.1007/978-3-031-95017-957',
       pdfUrl: researchPaperPdf,
+      pdfFilename: 'A_Comprehensive_Survey_of_Dark_Web_Crawlers.pdf',
       description: 'Presented at the ISMS 2025 Conference at NIT Kurukshetra. Provides an in-depth survey and taxonomic comparison of dark web crawling architectures, passive intelligence collection, onion routing discovery models, and hidden service analysis.',
       tags: ['Dark Web', 'Crawler Survey', 'ISMS 2025', 'NIT Kurukshetra', 'Springer'],
       badge: 'Springer Research'
+    },
+    {
+      title: 'Open Source Intelligence (OSINT) Tactical Notes',
+      publisher: 'Cyber Security & LEA Intelligence Division',
+      type: 'Training Document & Notes',
+      date: '2025',
+      pdfUrl: osintNotesPdf,
+      pdfFilename: 'OSINT_Notes_Kartikeya_Srivastava.pdf',
+      description: 'Specialized notes on Open-Source Intelligence (OSINT) methodologies, passive investigation techniques, domain profiling, public registry search, and digital footprinting for security analysts.',
+      tags: ['OSINT', 'Digital Footprinting', 'Threat Profiling', 'Downloadable PDF'],
+      badge: 'OSINT Notes'
+    },
+    {
+      title: 'OSINT & Google Dorking Comprehensive Notes',
+      publisher: 'Law Enforcement Training & Security Hubs',
+      type: 'Practical Reference Manual',
+      date: '2025',
+      pdfUrl: osintGoogleDorkingPdf,
+      pdfFilename: 'OSINT_AND_GOOGLE_DORKING_NOTES.pdf',
+      description: 'In-depth tactical guide covering advanced Google Dorking queries, search operators, passive reconnaissance techniques, target identification strategies, and OSINT workflows.',
+      tags: ['Google Dorking', 'OSINT Queries', 'Reconnaissance', 'Downloadable PDF'],
+      badge: 'Dorking Manual'
     },
     {
       title: 'Financial Cyber Fraud Legal & Technical Intervention Model',
@@ -36,15 +89,6 @@ export default function PublicationsSection() {
       description: 'Engineered multi-tier forensic tracking and legal recovery workflows that assisted cyber fraud victims in recovering approximately ₹2.5 Crore in compromised assets.',
       tags: ['Fraud Recovery', 'Legal Intervention', '₹2.5 Cr Recovered'],
       badge: 'Victim Relief'
-    },
-    {
-      title: 'Open-Source Intelligence (OSINT) Tactical Handbook for LEAs',
-      publisher: 'Law Enforcement Training & Security Hubs',
-      type: 'Practical Training Manual',
-      date: '2023',
-      description: 'Comprehensive guide covering passive digital footprinting, domain intelligence, public registry lookup, and threat actor profiling for police investigators.',
-      tags: ['OSINT', 'Digital Footprinting', 'Threat Profiling'],
-      badge: 'LEA Manual'
     },
     {
       title: 'Institutional Incident Response & Cyber Awareness Guidelines',
@@ -139,10 +183,9 @@ export default function PublicationsSection() {
                     {pub.pdfUrl && (
                       <a
                         href={pub.pdfUrl}
-                        download="A_Comprehensive_Survey_of_Dark_Web_Crawlers.pdf"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 font-mono text-xs text-white bg-emerald-600 hover:bg-emerald-700 font-bold px-3 py-1 rounded shadow-xs transition-colors"
+                        download={pub.pdfFilename || 'Document.pdf'}
+                        onClick={(e) => handleDownloadPdf(e, pub.pdfUrl!, pub.pdfFilename || 'Document.pdf')}
+                        className="inline-flex items-center gap-1.5 font-mono text-xs text-white bg-emerald-600 hover:bg-emerald-700 font-bold px-3 py-1 rounded shadow-xs transition-colors cursor-pointer"
                       >
                         <FileDown className="w-3.5 h-3.5" />
                         <span>Download PDF</span>
