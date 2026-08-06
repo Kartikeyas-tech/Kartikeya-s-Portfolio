@@ -1,14 +1,40 @@
 import express from "express";
 import path from "path";
+import fs from "fs";
 import dotenv from "dotenv";
 import { createServer as createViteServer } from "vite";
 
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 app.use(express.json());
+
+// Enable CORS for Vercel frontend calls
+app.use((_req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, x-apikey");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+  if (_req.method === "OPTIONS") {
+    return res.sendStatus(200);
+  }
+  next();
+});
+
+// Root route for backend status
+app.get("/", (_req, res, next) => {
+  const distIndexPath = path.join(process.cwd(), "dist", "index.html");
+  if (fs.existsSync(distIndexPath)) {
+    return next();
+  }
+  return res.json({
+    status: "ok",
+    service: "CyberSecurity Portfolio Backend Proxy",
+    message: "Backend API is live and operational.",
+    endpoints: ["/api/health", "/api/virustotal/files/:hash", "/api/virustotal/urls"]
+  });
+});
 
 // API ROUTES
 
