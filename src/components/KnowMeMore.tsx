@@ -45,7 +45,7 @@ export default function KnowMeMore() {
                   {/* Dark Navy Experience Badge at Bottom Right */}
                   <div className="absolute bottom-0 right-0 bg-[#0B1A30] text-white p-4 sm:p-5 rounded-tl-2xl shadow-2xl z-20 min-w-[140px] text-left border-t border-l border-[#1A2E4B] overflow-hidden">
                     <span className="font-sans font-black text-3xl sm:text-4xl text-[#2CD97B] block leading-none tracking-tight mb-1 relative z-10">
-                    4+
+                    6+
                     </span>
                     <span className="font-sans font-bold text-xs sm:text-sm uppercase tracking-wider text-white block leading-tight relative z-10">
                       YEARS<br />EXPERIENCE
