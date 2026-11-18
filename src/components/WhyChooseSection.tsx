@@ -31,7 +31,7 @@ export default function WhyChooseSection() {
             </h2>
             
             <p className="text-[15px] sm:text-[16px] text-cyber-ink-soft leading-relaxed max-w-[62ch] mb-8 font-medium">
-              I Have Been Working In Cyber Security For Organizations Across The Country For More Than 4+ Years Experience, Delivering High-Impact Training And Security Defense.
+              I Have Been Working In Cyber Security For Organizations Across The Country For More Than 6+ Years Experience, Delivering High-Impact Training And Security Defense.
             </p>
 
             <div className="border-l-2 border-cyber-green pl-5 mb-10">
